@@ -47,7 +47,7 @@ int main(){
     printf("\nFirst sets: \n");
     for(int i=0; i<n; i++){
         printf("First(%c) = { ", production[i][0]);
-        for(int j=0; j<firstCount[j]; j++){
+        for(int j=0; j<firstCount[i]; j++){
             printf("%c", first[i][j]);
         }
         printf("}\n");

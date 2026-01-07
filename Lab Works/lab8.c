@@ -46,10 +46,6 @@ int main(){
             fgetc(fp);
             printf("> -> Special symbol\n");
         }
-        // Identifier or keyword
-        // if(isalnum(ch)){
-        //     buffer[i++] = ch;
-        // }
         else if(isalpha(ch)){
             buffer[i++] = ch;
             while(isalnum(ch = fgetc(fp))){
@@ -68,22 +64,6 @@ int main(){
             i = 0;
             ungetc(ch, fp);
         }
-        // End of token
-        // else if((ch == ' ' || ch == '\n' || ch == '\t') && i !=0){
-        //     buffer[i] = '\0';
-        //     if(isKeyword(buffer)){
-        //         printf("%s -> Keyword\n", buffer);
-        //     }
-        //     else if(isdigit(buffer[0])){
-        //         printf("%s -> Number\n", buffer);
-        //     }
-        //     else{
-        //         printf("%s -> Identifier\n", buffer);
-        //     }
-        //     i = 0;
-        //     ungetc(ch, fp);
-        // }
-
         else if(isdigit(ch)){
             buffer[i++] = ch;
             while(isdigit(ch = fgetc(fp))){
